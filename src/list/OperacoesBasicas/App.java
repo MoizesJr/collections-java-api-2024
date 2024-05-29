@@ -2,19 +2,12 @@ package list.OperacoesBasicas;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        ListaTarefa listaTarefa = new ListaTarefa();
-        System.out.println(listaTarefa.obterNumeroTotalTarefas());
+        CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
 
-        listaTarefa.adicionarTarefa("Tarefa 1");
-        listaTarefa.adicionarTarefa("Tarefa 1");
-        listaTarefa.adicionarTarefa("Tarefa 3");
-        listaTarefa.adicionarTarefa("Tarefa 2");
+        carrinho.adicionarItem("Feijão", 2.30, 1);
+        carrinho.adicionarItem("Arroz", 8, 3);
+        carrinho.exibirItens();
+        System.out.println("O valor total da compra é = " + carrinho.calcularValorTotal());
 
-        System.out.println(listaTarefa.obterNumeroTotalTarefas());
-
-        listaTarefa.removerTarefa("Tarefa 2");
-        System.out.println(listaTarefa.obterNumeroTotalTarefas());
-
-        listaTarefa.obterDescricoesTarefa();
     }
 }
